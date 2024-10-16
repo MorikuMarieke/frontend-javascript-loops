@@ -169,59 +169,58 @@ const students = [
 // ==========================================
 
 //without use of variables
-for (let i = 0; i < students.length; i++) {
-    switch (true) {
-        case (students[i].zipCode === '3513'):
-            students[i].neighborhood = 'Pijlsweerd';
-            break;
-        case (students[i].zipCode === '3514'):
-            students[i].neighborhood = 'Vogelenbuurt';
-            break;
-        case (students[i].zipCode === '3512'):
-            students[i].neighborhood = 'Binnenstad';
-            break;
-        case (students[i].zipCode === '3531'):
-            students[i].neighborhood = 'Lombok';
-            break;
-        case (students[i].zipCode === '3572'):
-            students[i].neighborhood = 'Wittevrouwen';
-            break;
-        case (students[i].zipCode === '3581'):
-            students[i].neighborhood = 'Oudwijk';
-            break;
-        case (students[i].zipCode === '3583'):
-            students[i].neighborhood = 'Schildersbuurt';
-            break;
-    }
-}
-console.log(students)
-
+// for (let i = 0; i < students.length; i++) {
+//     switch (true) {
+//         case (students[i].zipCode === '3513'):
+//             students[i].neighborhood = 'Pijlsweerd';
+//             break;
+//         case (students[i].zipCode === '3514'):
+//             students[i].neighborhood = 'Vogelenbuurt';
+//             break;
+//         case (students[i].zipCode === '3512'):
+//             students[i].neighborhood = 'Binnenstad';
+//             break;
+//         case (students[i].zipCode === '3531'):
+//             students[i].neighborhood = 'Lombok';
+//             break;
+//         case (students[i].zipCode === '3572'):
+//             students[i].neighborhood = 'Wittevrouwen';
+//             break;
+//         case (students[i].zipCode === '3581'):
+//             students[i].neighborhood = 'Oudwijk';
+//             break;
+//         case (students[i].zipCode === '3583'):
+//             students[i].neighborhood = 'Schildersbuurt';
+//             break;
+//     }
+// }
+// console.log(students)
 
 //with use of variables
 for (let i = 0; i < students.length; i++) {
     let neighborhood = students[i].neighborhood
     let zip = students[i].zipCode
     switch (true) {
-        case (zip === 3513):
-            neighborhood = 'Pijlsweerd';
+        case (zip === '3513'):
+            students[i].neighborhood = 'Pijlsweerd';
             break;
-        case (zip === 3514):
-            neighborhood = 'Vogelenbuurt';
+        case (zip === '3514'):
+            students[i].neighborhood = 'Vogelenbuurt';
             break;
-        case (zip === 3512):
-            neighborhood = 'Binnenstad';
+        case (zip === '3512'):
+            students[i].neighborhood = 'Binnenstad';
             break;
-        case (zip === 3531):
-            neighborhood = 'Lombok';
+        case (zip === '3531'):
+            students[i].neighborhood = 'Lombok';
             break;
-        case (zip === 3572):
-            neighborhood = 'Wittevrouwen';
+        case (zip === '3572'):
+            students[i].neighborhood = 'Wittevrouwen';
             break;
-        case (zip === 3581):
-            neighborhood = 'Oudwijk';
+        case (zip === '3581'):
+            students[i].neighborhood = 'Oudwijk';
             break;
-        case (zip === 3583):
-            neighborhood = 'Schildersbuurt';
+        case (zip === '3583'):
+            students[i].neighborhood = 'Schildersbuurt';
             break;
     }
 }
