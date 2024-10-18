@@ -65,20 +65,18 @@ for (let i = 0; i < scores.length; i++) {
 // ==========================================
 
 for (let i = 0; i < scores.length; i++) {
-    // console.log(scores[i].score);
     let score = scores[i].score;
-    let grade = scores[i].grade;
 
     if (score < 60) {
         scores[i].grade = 'F';
     }
-    else if (score >= 60 && score < 70) {
+    else if (score < 70) {
         scores[i].grade = 'D';
     }
-    else if (score >= 70 && score < 80) {
+    else if (score < 80) {
         scores[i].grade = 'C';
     }
-    else if (score >= 80 && score < 90) {
+    else if (score < 90) {
         scores[i].grade = 'B';
     }
     else {
