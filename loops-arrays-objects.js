@@ -16,9 +16,9 @@ const scores = [
 // 66
 // ==========================================
 
-
-
-
+for (let i = 0; i < scores.length; i++) {
+    console.log(scores[i].score)
+}
 
 // ==========================================
 // Opdracht 1b
@@ -32,9 +32,24 @@ const scores = [
 // D
 // ==========================================
 
-
-
-
+for (let i = 0; i < scores.length; i++) {
+    let score = scores[i].score
+    if (score < 60) {
+        console.log('F')
+    }
+    else if (score < 70) {
+        console.log('D')
+    }
+    else if (score < 80) {
+        console.log('C')
+    }
+    else if (score < 90) {
+        console.log('B')
+    }
+    else {
+        console.log('A')
+    }
+}
 
 // ==========================================
 // Opdracht 1c
@@ -49,9 +64,26 @@ const scores = [
 //  ];
 // ==========================================
 
+for (let i = 0; i < scores.length; i++) {
+    let score = scores[i].score;
 
-
-
+    if (score < 60) {
+        scores[i].grade = 'F';
+    }
+    else if (score < 70) {
+        scores[i].grade = 'D';
+    }
+    else if (score < 80) {
+        scores[i].grade = 'C';
+    }
+    else if (score < 90) {
+        scores[i].grade = 'B';
+    }
+    else {
+        scores[i].grade = 'A';
+    }
+}
+console.log(scores)
 
 // ==========================================
 // Opdracht 2
@@ -75,17 +107,18 @@ const NOVIEmployees = [
 //  ];
 // ==========================================
 
-
-
-
-
+for (let i = 0; i < NOVIEmployees.length; i++) {
+    let firstName = NOVIEmployees[i].firstName;
+    let lastName = NOVIEmployees[i].lastName;
+    NOVIEmployees[i].email = `${firstName.toLowerCase()}.${lastName.toLowerCase()}@novi.nl`;
+}
+console.log(NOVIEmployees)
 
 // Opdracht 2-BONUS
 // Lukt het je om ervoor te zorgen dat alle e-mailadressen in lowercase letters komen te staan? Dit heb je nog niet geleerd, maar google is your best friend...
 // ==========================================
 
-
-
+// zie opdracht 2
 
 // ==========================================
 // Opdracht 3
@@ -111,8 +144,10 @@ const students = [
     {name: 'Jan', city: 'Utrecht', zipCode: '3531', neighborhood: null},
     {name: 'Laura', city: 'Utrecht', zipCode: '3531', neighborhood: null},
     {name: 'Aicha', city: 'Utrecht', zipCode: '3514', neighborhood: null},
-    {name: 'Karima', city: 'Utrecht', zipCode: '3531', neighborhood: null},
+    {name: 'Karima', city: 'Utrecht', zipCode: '3531', neighborhood: null}
 ];
+
+console.log(students)
 
 // Verwachte uitkomsten:
 // [
@@ -131,5 +166,65 @@ const students = [
 // ]
 // ==========================================
 
+// without use of variables
+for (let i = 0; i < students.length; i++) {
+    switch (true) {
+        case (students[i].zipCode === '3513'):
+            students[i].neighborhood = 'Pijlsweerd';
+            break;
+        case (students[i].zipCode === '3514'):
+            students[i].neighborhood = 'Vogelenbuurt';
+            break;
+        case (students[i].zipCode === '3512'):
+            students[i].neighborhood = 'Binnenstad';
+            break;
+        case (students[i].zipCode === '3531'):
+            students[i].neighborhood = 'Lombok';
+            break;
+        case (students[i].zipCode === '3572'):
+            students[i].neighborhood = 'Wittevrouwen';
+            break;
+        case (students[i].zipCode === '3581'):
+            students[i].neighborhood = 'Oudwijk';
+            break;
+        case (students[i].zipCode === '3583'):
+            students[i].neighborhood = 'Schildersbuurt';
+            break;
+        default:
+            students[i].neighborhood = null;
+    }
+}
+console.log(students)
+
+//with use of variables
+for (let i = 0; i < students.length; i++) {
+    let zip = students[i].zipCode
+    switch (zip) {
+        case ('3513'):
+            students[i].neighborhood = 'Pijlsweerd';
+            break;
+        case ('3514'):
+            students[i].neighborhood = 'Vogelenbuurt';
+            break;
+        case ('3512'):
+            students[i].neighborhood = 'Binnenstad';
+            break;
+        case ('3531'):
+            students[i].neighborhood = 'Lombok';
+            break;
+        case ('3572'):
+            students[i].neighborhood = 'Wittevrouwen';
+            break;
+        case ('3581'):
+            students[i].neighborhood = 'Oudwijk';
+            break;
+        case ('3583'):
+            students[i].neighborhood = 'Schildersbuurt';
+            break;
+        default:
+            students[i].neighborhood = null;
+    }
+}
+console.log(students)
 
 
